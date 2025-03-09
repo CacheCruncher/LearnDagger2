@@ -11,8 +11,11 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        val dagerBuild = DaggerUserRegistrationComponent.builder().build()
         val userRegistrationService =
-            DaggerUserRegistrationComponent.builder().build().getRegistrationComponent()
+            dagerBuild.getRegistrationComponent()
+        val emailService = dagerBuild.getEmailServiceComponent()
+        emailService.sendEmail()
         userRegistrationService.registerService()
     }
 }
