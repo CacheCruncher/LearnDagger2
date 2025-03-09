@@ -4,11 +4,11 @@ import com.jawahir.learndagger.data.UserRepository
 import javax.inject.Inject
 
 class UserRegistrationService @Inject constructor(
-    private val emailService: EmailService,
+    private val notificationService: NotificationService,
     private val userRepository: UserRepository
 ) {
-    fun registerService(){
-        userRepository.saveUser("abultabul@gmail.com","abultabul")
-        emailService.sendEmail()
+    fun registerService(email:String, password:String){
+        userRepository.saveUser(email,password)
+        notificationService.send(email,password,"this is dagger message")
     }
 }
