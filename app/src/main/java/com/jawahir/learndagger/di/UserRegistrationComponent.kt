@@ -1,11 +1,9 @@
 package com.jawahir.learndagger.di
 
-import com.jawahir.learndagger.service.EmailService
-import com.jawahir.learndagger.service.UserRegistrationService
+import com.jawahir.learndagger.MainActivity
 import dagger.Component
 
 @Component
 interface UserRegistrationComponent {
-    fun getRegistrationComponent():UserRegistrationService
-    fun getEmailServiceComponent():EmailService
+    fun inject(mainActivity: MainActivity)
 }
