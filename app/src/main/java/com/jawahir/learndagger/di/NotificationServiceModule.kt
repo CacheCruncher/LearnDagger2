@@ -7,12 +7,14 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
+import javax.inject.Singleton
 
 @Module
 class NotificationServiceProvidesModule() {
     @Named("sms")
     @Provides
-    fun provideSmsService(retry:Int): NotificationService {
+    @Singleton
+    fun provideSmsService(@Named("retry") retry:Int): NotificationService {
         return SmsService(retry)
     }
 }
