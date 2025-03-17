@@ -12,8 +12,8 @@ class EmailService @Inject constructor():NotificationService{
     }
 }
 
-class SmsService ():NotificationService{
+class SmsService (private val retry:Int):NotificationService{
     override fun send(from:String, to:String, body:String){
-        println("send sms: $from, $to, $body")
+        println("send sms: $from, $to, $body,  retry: $retry")
     }
 }

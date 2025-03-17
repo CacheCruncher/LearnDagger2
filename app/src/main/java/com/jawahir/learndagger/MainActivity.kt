@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.jawahir.learndagger.di.DaggerUserRegistrationComponent
+import com.jawahir.learndagger.di.NotificationServiceProvidesModule
 import com.jawahir.learndagger.service.UserRegistrationService
 import javax.inject.Inject
 
@@ -16,7 +17,10 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val daggerBuild = DaggerUserRegistrationComponent.builder().build()
+        val daggerBuild =
+            DaggerUserRegistrationComponent.builder()
+                .notificationServiceProvidesModule(NotificationServiceProvidesModule(3))
+                .build()
         daggerBuild.inject(this)
         userRegistrationService.registerService("abultabul@gmail.com", "abultablu")
     }
