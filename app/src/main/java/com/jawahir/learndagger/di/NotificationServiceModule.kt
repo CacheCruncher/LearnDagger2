@@ -9,10 +9,10 @@ import dagger.Provides
 import javax.inject.Named
 
 @Module
-class NotificationServiceProvidesModule(private val retry:Int) {
+class NotificationServiceProvidesModule() {
     @Named("sms")
     @Provides
-    fun provideSmsService(): NotificationService {
+    fun provideSmsService(retry:Int): NotificationService {
         return SmsService(retry)
     }
 }
