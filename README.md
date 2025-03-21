@@ -16,3 +16,7 @@ Dagger 2
 
 
 <img width="535" alt="image" src="https://github.com/user-attachments/assets/144ed440-1405-45c4-887d-5335340da0e8" />
+
+
+ use subcomponent is to access the dependency from app component
+<img width="551" alt="image" src="https://github.com/user-attachments/assets/024a2f5c-9d5d-4cfd-bf1c-cc7a75fa5b24" />
