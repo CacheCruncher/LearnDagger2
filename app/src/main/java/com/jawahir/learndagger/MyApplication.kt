@@ -1,16 +1,16 @@
 package com.jawahir.learndagger
 
 import android.app.Application
-import com.jawahir.learndagger.di.DaggerUserRegistrationComponent
-import com.jawahir.learndagger.di.UserRegistrationComponent
+import com.jawahir.learndagger.di.AppComponent
+import com.jawahir.learndagger.di.DaggerAppComponent
 
-class MyApplication:Application() {
-    lateinit var daggerBuild: UserRegistrationComponent
+class MyApplication : Application() {
+    lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
-        daggerBuild =
-            DaggerUserRegistrationComponent.factory().create(3)
+        appComponent =
+            DaggerAppComponent.builder().build()
 
     }
 }
