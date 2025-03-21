@@ -14,9 +14,13 @@ Dagger 2
 - Builder: A builder lets you customize and build components step-by-step.
 
 
+## 1. Used AppComponent as Dependency in other components
 
 <img width="535" alt="image" src="https://github.com/user-attachments/assets/144ed440-1405-45c4-887d-5335340da0e8" />
 
-
- use subcomponent is to access the dependency from app component
+## 2. Use subcomponent  to access the dependency from app component
 <img width="551" alt="image" src="https://github.com/user-attachments/assets/024a2f5c-9d5d-4cfd-bf1c-cc7a75fa5b24" />
+
+## 3. Builder vs Factory
+<img width="610" alt="image" src="https://github.com/user-attachments/assets/1d75c41a-3660-48a4-86f3-09688b9954de" />
+
