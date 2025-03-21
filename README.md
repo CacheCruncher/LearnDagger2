@@ -12,3 +12,7 @@ Dagger 2
 - Factory: A factory creates components with different settings when you need them.
 
 - Builder: A builder lets you customize and build components step-by-step.
+
+
+
+<img width="535" alt="image" src="https://github.com/user-attachments/assets/144ed440-1405-45c4-887d-5335340da0e8" />
