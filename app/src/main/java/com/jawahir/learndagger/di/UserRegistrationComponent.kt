@@ -7,11 +7,11 @@ import com.jawahir.learndagger.di.module.UserRegistrationModule
 import com.jawahir.learndagger.di.scope.ActivityScope
 import dagger.BindsInstance
 import dagger.Component
+import dagger.Subcomponent
 import javax.inject.Named
 
 @ActivityScope
-@Component(
-    dependencies = [AppComponent::class],
+@Subcomponent(
     modules = [
         UserRegistrationModule::class,
         NotificationServiceProvidesModule::class,
@@ -21,8 +21,8 @@ import javax.inject.Named
 interface UserRegistrationComponent {
     fun inject(mainActivity: MainActivity)
 
-    @Component.Factory
+    @Subcomponent.Factory
     interface Factory {
-        fun create(@BindsInstance @Named("retry") retry: Int, appComponent: AppComponent): UserRegistrationComponent
+        fun create(@BindsInstance @Named("retry") retry: Int): UserRegistrationComponent
     }
 }

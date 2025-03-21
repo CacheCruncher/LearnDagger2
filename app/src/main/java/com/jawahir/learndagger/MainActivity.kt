@@ -3,7 +3,6 @@ package com.jawahir.learndagger
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.jawahir.learndagger.di.DaggerUserRegistrationComponent
 import com.jawahir.learndagger.service.UserRegistrationService
 import javax.inject.Inject
 
@@ -17,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val appComponent = (application as MyApplication).appComponent
-        val userRegistrationComponent = DaggerUserRegistrationComponent.factory().create(3,appComponent)
+        val userRegistrationComponent = appComponent.getUserRegistrationComponentFactory().create(3)
 
         userRegistrationComponent.inject(this)
         userRegistrationService.registerService("abultabul@gmail.com", "abultablu")
