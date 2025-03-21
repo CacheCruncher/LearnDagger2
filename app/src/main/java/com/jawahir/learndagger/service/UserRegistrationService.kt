@@ -1,7 +1,7 @@
 package com.jawahir.learndagger.service
 
 import com.jawahir.learndagger.data.UserRepository
-import com.jawahir.learndagger.di.SQLRepositoryAnnotation
+import com.jawahir.learndagger.di.qualifier.SQLRepositoryAnnotation
 import javax.inject.Inject
 import javax.inject.Named
 

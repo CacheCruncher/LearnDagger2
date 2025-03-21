@@ -1,9 +1,8 @@
-package com.jawahir.learndagger.di
+package com.jawahir.learndagger.di.module
 
-import com.jawahir.learndagger.service.EmailService
+import com.jawahir.learndagger.di.scope.ApplicationScope
 import com.jawahir.learndagger.service.NotificationService
 import com.jawahir.learndagger.service.SmsService
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
@@ -18,9 +17,3 @@ class NotificationServiceProvidesModule() {
     }
 }
 
-@Module
-abstract class NotificationServiceBindsModule {
-    @EmailNotificationsAnnotation
-    @Binds
-    abstract fun bindEmailService(emailService: EmailService): NotificationService
-}

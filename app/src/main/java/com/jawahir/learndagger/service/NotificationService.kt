@@ -1,6 +1,6 @@
 package com.jawahir.learndagger.service
 
-import com.jawahir.learndagger.di.ApplicationScope
+import com.jawahir.learndagger.di.scope.ApplicationScope
 import javax.inject.Inject
 
 interface NotificationService{
